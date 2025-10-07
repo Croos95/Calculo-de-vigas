@@ -1,0 +1,774 @@
+[
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "glob",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "glob",
+        "description": "glob",
+        "detail": "glob",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "sysconfig",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sysconfig",
+        "description": "sysconfig",
+        "detail": "sysconfig",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "winreg",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "winreg",
+        "description": "winreg",
+        "detail": "winreg",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Iterable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Iterable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "sympy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sympy",
+        "description": "sympy",
+        "detail": "sympy",
+        "documentation": {}
+    },
+    {
+        "label": "cumulative_trapezoid",
+        "importPath": "scipy.integrate",
+        "description": "scipy.integrate",
+        "isExtraImport": true,
+        "detail": "scipy.integrate",
+        "documentation": {}
+    },
+    {
+        "label": "textwrap",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "textwrap",
+        "description": "textwrap",
+        "detail": "textwrap",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "field",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "Tee",
+        "kind": 6,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "class Tee:\n    def __init__(self, file):\n        self.f = file\n    def write(self, what):\n        if self.f is not None:\n            try:\n                self.f.write(what.replace(\"\\n\", \"\\r\\n\"))\n            except OSError:\n                pass\n        tee_f.write(what)",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "get_root_hkey",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def get_root_hkey():\n    try:\n        winreg.OpenKey(\n            winreg.HKEY_LOCAL_MACHINE, root_key_name, 0, winreg.KEY_CREATE_SUB_KEY\n        )\n        return winreg.HKEY_LOCAL_MACHINE\n    except OSError:\n        # Either not exist, or no permissions to create subkey means\n        # must be HKCU\n        return winreg.HKEY_CURRENT_USER",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "create_shortcut",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def create_shortcut(\n    path, description, filename, arguments=\"\", workdir=\"\", iconpath=\"\", iconindex=0\n):\n    import pythoncom\n    from win32com.shell import shell\n    ilink = pythoncom.CoCreateInstance(\n        shell.CLSID_ShellLink,\n        None,\n        pythoncom.CLSCTX_INPROC_SERVER,\n        shell.IID_IShellLink,",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "get_special_folder_path",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def get_special_folder_path(path_name):\n    from win32com.shell import shell, shellcon\n    for maybe in \"\"\"\n        CSIDL_COMMON_STARTMENU CSIDL_STARTMENU CSIDL_COMMON_APPDATA\n        CSIDL_LOCAL_APPDATA CSIDL_APPDATA CSIDL_COMMON_DESKTOPDIRECTORY\n        CSIDL_DESKTOPDIRECTORY CSIDL_COMMON_STARTUP CSIDL_STARTUP\n        CSIDL_COMMON_PROGRAMS CSIDL_PROGRAMS CSIDL_PROGRAM_FILES_COMMON\n        CSIDL_PROGRAM_FILES CSIDL_FONTS\"\"\".split():\n        if maybe == path_name:\n            csidl = getattr(shellcon, maybe)",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "CopyTo",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def CopyTo(desc, src, dest):\n    import win32api\n    import win32con\n    while 1:\n        try:\n            win32api.CopyFile(src, dest, 0)\n            return\n        except win32api.error as details:\n            if details.winerror == 5:  # access denied - user not admin.\n                raise",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "LoadSystemModule",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def LoadSystemModule(lib_dir, modname):\n    # See if this is a debug build.\n    import importlib.machinery\n    import importlib.util\n    suffix = \"_d\" if \"_d.pyd\" in importlib.machinery.EXTENSION_SUFFIXES else \"\"\n    filename = \"%s%d%d%s.dll\" % (\n        modname,\n        sys.version_info.major,\n        sys.version_info.minor,\n        suffix,",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "SetPyKeyVal",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def SetPyKeyVal(key_name, value_name, value):\n    root_hkey = get_root_hkey()\n    root_key = winreg.OpenKey(root_hkey, root_key_name)\n    try:\n        my_key = winreg.CreateKey(root_key, key_name)\n        try:\n            winreg.SetValueEx(my_key, value_name, 0, winreg.REG_SZ, value)\n            if verbose:\n                print(f\"-> {root_key_name}\\\\{key_name}[{value_name}]={value!r}\")\n        finally:",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "UnsetPyKeyVal",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def UnsetPyKeyVal(key_name, value_name, delete_key=False):\n    root_hkey = get_root_hkey()\n    root_key = winreg.OpenKey(root_hkey, root_key_name)\n    try:\n        my_key = winreg.OpenKey(root_key, key_name, 0, winreg.KEY_SET_VALUE)\n        try:\n            winreg.DeleteValue(my_key, value_name)\n            if verbose:\n                print(f\"-> DELETE {root_key_name}\\\\{key_name}[{value_name}]\")\n        finally:",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterCOMObjects",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def RegisterCOMObjects(register=True):\n    import win32com.server.register\n    if register:\n        func = win32com.server.register.RegisterClasses\n    else:\n        func = win32com.server.register.UnregisterClasses\n    flags = {}\n    if not verbose:\n        flags[\"quiet\"] = 1\n    for module, klass_name in com_modules:",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterHelpFile",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def RegisterHelpFile(register=True, lib_dir=None):\n    if lib_dir is None:\n        lib_dir = sysconfig.get_paths()[\"platlib\"]\n    if register:\n        # Register the .chm help file.\n        chm_file = os.path.join(lib_dir, \"PyWin32.chm\")\n        if os.path.isfile(chm_file):\n            # This isn't recursive, so if 'Help' doesn't exist, we croak\n            SetPyKeyVal(\"Help\", None, None)\n            SetPyKeyVal(\"Help\\\\Pythonwin Reference\", None, chm_file)",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterPythonwin",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def RegisterPythonwin(register=True, lib_dir=None):\n    \"\"\"Add (or remove) Pythonwin to context menu for python scripts.\n    ??? Should probably also add Edit command for pys files also.\n    Also need to remove these keys on uninstall, but there's no function\n    to add registry entries to uninstall log ???\n    \"\"\"\n    import os\n    if lib_dir is None:\n        lib_dir = sysconfig.get_paths()[\"platlib\"]\n    classes_root = get_root_hkey()",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "get_shortcuts_folder",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def get_shortcuts_folder():\n    if get_root_hkey() == winreg.HKEY_LOCAL_MACHINE:\n        try:\n            fldr = get_special_folder_path(\"CSIDL_COMMON_PROGRAMS\")\n        except OSError:\n            # No CSIDL_COMMON_PROGRAMS on this platform\n            fldr = get_special_folder_path(\"CSIDL_PROGRAMS\")\n    else:\n        # non-admin install - always goes in this user's start menu.\n        fldr = get_special_folder_path(\"CSIDL_PROGRAMS\")",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "get_system_dir",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def get_system_dir():\n    import win32api  # we assume this exists.\n    try:\n        import pythoncom\n        import win32process\n        from win32com.shell import shell, shellcon\n        try:\n            if win32process.IsWow64Process():\n                return shell.SHGetSpecialFolderPath(0, shellcon.CSIDL_SYSTEMX86)\n            return shell.SHGetSpecialFolderPath(0, shellcon.CSIDL_SYSTEM)",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "fixup_dbi",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def fixup_dbi():\n    # We used to have a dbi.pyd with our .pyd files, but now have a .py file.\n    # If the user didn't uninstall, they will find the .pyd which will cause\n    # problems - so handle that.\n    import win32api\n    import win32con\n    pyd_name = os.path.join(os.path.dirname(win32api.__file__), \"dbi.pyd\")\n    pyd_d_name = os.path.join(os.path.dirname(win32api.__file__), \"dbi_d.pyd\")\n    py_name = os.path.join(os.path.dirname(win32con.__file__), \"dbi.py\")\n    for this_pyd in (pyd_name, pyd_d_name):",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "install",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def install(lib_dir):\n    import traceback\n    # The .pth file is now installed as a regular file.\n    # Create the .pth file in the site-packages dir, and use only relative paths\n    # We used to write a .pth directly to sys.prefix - clobber it.\n    if os.path.isfile(os.path.join(sys.prefix, \"pywin32.pth\")):\n        os.unlink(os.path.join(sys.prefix, \"pywin32.pth\"))\n    # The .pth may be new and therefore not loaded in this session.\n    # Setup the paths just in case.\n    for name in \"win32 win32\\\\lib Pythonwin\".split():",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "uninstall",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def uninstall(lib_dir):\n    # First ensure our system modules are loaded from pywin32_system, so\n    # we can remove the ones we copied...\n    LoadSystemModule(lib_dir, \"pywintypes\")\n    LoadSystemModule(lib_dir, \"pythoncom\")\n    try:\n        RegisterCOMObjects(False)\n    except Exception as why:\n        print(f\"Failed to unregister COM objects: {why}\")\n    try:",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "verify_destination",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def verify_destination(location: str) -> str:\n    location = os.path.abspath(location)\n    if not os.path.isdir(location):\n        raise argparse.ArgumentTypeError(\n            f'Path \"{location}\" is not an existing directory!'\n        )\n    return location\ndef main():\n    parser = argparse.ArgumentParser(\n        formatter_class=argparse.RawDescriptionHelpFormatter,",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(\n        formatter_class=argparse.RawDescriptionHelpFormatter,\n        description=\"\"\"A post-install script for the pywin32 extensions.\n    * Typical usage:\n    > python -m pywin32_postinstall -install\n    * or (shorter but you don't have control over which python environment is used)\n    > pywin32_postinstall -install\n    You need to execute this script, with a '-install' parameter,\n    to ensure the environment is setup correctly to install COM objects, services, etc.",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "tee_f",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "tee_f = open(\n    os.path.join(\n        tempfile.gettempdir(),  # Send output somewhere so it can be found if necessary...\n        \"pywin32_postinstall.log\",\n    ),\n    \"w\",\n)\nclass Tee:\n    def __init__(self, file):\n        self.f = file",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "sys.stderr",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "sys.stderr = Tee(sys.stderr)\nsys.stdout = Tee(sys.stdout)\ncom_modules = [\n    # module_name,                      class_names\n    (\"win32com.servers.interp\", \"Interpreter\"),\n    (\"win32com.servers.dictionary\", \"DictionaryPolicy\"),\n    (\"win32com.axscript.client.pyscript\", \"PyScript\"),\n]\n# Is this a 'silent' install - ie, avoid all dialogs.\n# Different than 'verbose'",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "sys.stdout",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "sys.stdout = Tee(sys.stdout)\ncom_modules = [\n    # module_name,                      class_names\n    (\"win32com.servers.interp\", \"Interpreter\"),\n    (\"win32com.servers.dictionary\", \"DictionaryPolicy\"),\n    (\"win32com.axscript.client.pyscript\", \"PyScript\"),\n]\n# Is this a 'silent' install - ie, avoid all dialogs.\n# Different than 'verbose'\nsilent = 0",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "com_modules",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "com_modules = [\n    # module_name,                      class_names\n    (\"win32com.servers.interp\", \"Interpreter\"),\n    (\"win32com.servers.dictionary\", \"DictionaryPolicy\"),\n    (\"win32com.axscript.client.pyscript\", \"PyScript\"),\n]\n# Is this a 'silent' install - ie, avoid all dialogs.\n# Different than 'verbose'\nsilent = 0\n# Verbosity of output messages.",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "silent",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "silent = 0\n# Verbosity of output messages.\nverbose = 1\nroot_key_name = \"Software\\\\Python\\\\PythonCore\\\\\" + sys.winver\ndef get_root_hkey():\n    try:\n        winreg.OpenKey(\n            winreg.HKEY_LOCAL_MACHINE, root_key_name, 0, winreg.KEY_CREATE_SUB_KEY\n        )\n        return winreg.HKEY_LOCAL_MACHINE",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "verbose",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "verbose = 1\nroot_key_name = \"Software\\\\Python\\\\PythonCore\\\\\" + sys.winver\ndef get_root_hkey():\n    try:\n        winreg.OpenKey(\n            winreg.HKEY_LOCAL_MACHINE, root_key_name, 0, winreg.KEY_CREATE_SUB_KEY\n        )\n        return winreg.HKEY_LOCAL_MACHINE\n    except OSError:\n        # Either not exist, or no permissions to create subkey means",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "root_key_name",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "root_key_name = \"Software\\\\Python\\\\PythonCore\\\\\" + sys.winver\ndef get_root_hkey():\n    try:\n        winreg.OpenKey(\n            winreg.HKEY_LOCAL_MACHINE, root_key_name, 0, winreg.KEY_CREATE_SUB_KEY\n        )\n        return winreg.HKEY_LOCAL_MACHINE\n    except OSError:\n        # Either not exist, or no permissions to create subkey means\n        # must be HKCU",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "run_test",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_testall",
+        "description": ".venv.Scripts.pywin32_testall",
+        "peekOfCode": "def run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_extras\n    print(\"--- Running '%s' ---\" % script)\n    sys.stdout.flush()\n    result = subprocess.run(cmd, check=False, cwd=dirname)\n    print(f\"*** Test script '{script}' exited with {result.returncode}\")\n    sys.stdout.flush()\n    if result.returncode:",
+        "detail": ".venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "find_and_run",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_testall",
+        "description": ".venv.Scripts.pywin32_testall",
+        "peekOfCode": "def find_and_run(possible_locations, extras):\n    for maybe in possible_locations:\n        if os.path.isfile(maybe):\n            run_test(maybe, extras)\n            break\n    else:\n        raise RuntimeError(\n            \"Failed to locate a test script in one of %s\" % possible_locations\n        )\ndef main():",
+        "detail": ".venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_testall",
+        "description": ".venv.Scripts.pywin32_testall",
+        "peekOfCode": "def main():\n    import argparse\n    code_directories = [project_root] + site_packages\n    parser = argparse.ArgumentParser(\n        description=\"A script to trigger tests in all subprojects of PyWin32.\"\n    )\n    parser.add_argument(\n        \"-no-user-interaction\",\n        default=False,\n        action=\"store_true\",",
+        "detail": ".venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "project_root",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_testall",
+        "description": ".venv.Scripts.pywin32_testall",
+        "peekOfCode": "project_root = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))\nsite_packages = [site.getusersitepackages()] + site.getsitepackages()\nfailures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_extras",
+        "detail": ".venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "site_packages",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_testall",
+        "description": ".venv.Scripts.pywin32_testall",
+        "peekOfCode": "site_packages = [site.getusersitepackages()] + site.getsitepackages()\nfailures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_extras\n    print(\"--- Running '%s' ---\" % script)",
+        "detail": ".venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "failures",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pywin32_testall",
+        "description": ".venv.Scripts.pywin32_testall",
+        "peekOfCode": "failures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_extras\n    print(\"--- Running '%s' ---\" % script)\n    sys.stdout.flush()",
+        "detail": ".venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "generar_dataframe",
+        "kind": 2,
+        "importPath": "backend.calculos",
+        "description": "backend.calculos",
+        "peekOfCode": "def generar_dataframe(viga: Viga, num_puntos: int = 400) -> pd.DataFrame:\n    \"\"\"Evalúa las expresiones simbólicas de la viga y devuelve un DataFrame.\"\"\"\n    datos = viga.evaluar(num_puntos=num_puntos)\n    df = pd.DataFrame(datos)\n    columnas = {\n        \"V\": \"cortante\",\n        \"M\": \"momento\",\n        \"theta\": \"pendiente\",\n        \"deflexion\": \"deflexion\",\n    }",
+        "detail": "backend.calculos",
+        "documentation": {}
+    },
+    {
+        "label": "obtener_maximos",
+        "kind": 2,
+        "importPath": "backend.calculos",
+        "description": "backend.calculos",
+        "peekOfCode": "def obtener_maximos(df: pd.DataFrame) -> Dict[str, Tuple[float, float]]:\n    \"\"\"Encuentra valores máximos absolutos y sus posiciones.\"\"\"\n    resultados: Dict[str, Tuple[float, float]] = {}\n    for columna in [\"cortante\", \"momento\", \"pendiente\", \"deflexion\"]:\n        if columna not in df:\n            continue\n        idx = df[columna].abs().idxmax()\n        resultados[columna] = (float(df.loc[idx, \"x\"]), float(df.loc[idx, columna]))\n    return resultados\ndef comparar_simbolico_numerico(viga: Viga, num_puntos: int = 400) -> pd.DataFrame:",
+        "detail": "backend.calculos",
+        "documentation": {}
+    },
+    {
+        "label": "comparar_simbolico_numerico",
+        "kind": 2,
+        "importPath": "backend.calculos",
+        "description": "backend.calculos",
+        "peekOfCode": "def comparar_simbolico_numerico(viga: Viga, num_puntos: int = 400) -> pd.DataFrame:\n    \"\"\"Integra numéricamente para comparar con la solución simbólica.\"\"\"\n    df = generar_dataframe(viga, num_puntos=num_puntos)\n    EI = viga.E * viga.I\n    curvatura = df[\"momento\"].to_numpy() / EI\n    x_vals = df[\"x\"].to_numpy()\n    pendiente_num = cumulative_trapezoid(curvatura, x_vals, initial=0.0)\n    deflexion_num = cumulative_trapezoid(pendiente_num, x_vals, initial=0.0)\n    # Ajuste lineal para cumplir y(0)=y(L)=0\n    if len(x_vals) > 1:",
+        "detail": "backend.calculos",
+        "documentation": {}
+    },
+    {
+        "label": "crear_funciones_lambdify",
+        "kind": 2,
+        "importPath": "backend.calculos",
+        "description": "backend.calculos",
+        "peekOfCode": "def crear_funciones_lambdify(viga: Viga) -> Dict[str, sp.Lambda]:\n    \"\"\"Devuelve funciones listas para evaluación numérica rápida.\"\"\"\n    expresiones = viga.obtener_expresiones()\n    return {nombre: sp.lambdify(x, expr, \"numpy\") for nombre, expr in expresiones.items()}\ndef discretizar(expr: sp.Expr, L: float, num_puntos: int = 400) -> Tuple[np.ndarray, np.ndarray]:\n    \"\"\"Discretiza cualquier expresión simbólica en [0, L].\"\"\"\n    x_vals = np.linspace(0.0, L, num_puntos)\n    func = sp.lambdify(x, expr, \"numpy\")\n    valores = func(x_vals)\n    return x_vals, valores",
+        "detail": "backend.calculos",
+        "documentation": {}
+    },
+    {
+        "label": "discretizar",
+        "kind": 2,
+        "importPath": "backend.calculos",
+        "description": "backend.calculos",
+        "peekOfCode": "def discretizar(expr: sp.Expr, L: float, num_puntos: int = 400) -> Tuple[np.ndarray, np.ndarray]:\n    \"\"\"Discretiza cualquier expresión simbólica en [0, L].\"\"\"\n    x_vals = np.linspace(0.0, L, num_puntos)\n    func = sp.lambdify(x, expr, \"numpy\")\n    valores = func(x_vals)\n    return x_vals, valores",
+        "detail": "backend.calculos",
+        "documentation": {}
+    },
+    {
+        "label": "iniciar_menu_cli",
+        "kind": 2,
+        "importPath": "backend.menus",
+        "description": "backend.menus",
+        "peekOfCode": "def iniciar_menu_cli() -> None:\n    print(\"========================\")\n    print(\" Analizador de Vigas 🧮\")\n    print(\"========================\")\n    ejemplos = {\n        \"1\": Viga(6.0, 210e9, 8e-6),\n        \"2\": Viga(8.0, 200e9, 1.2e-5),\n    }\n    ejemplos[\"1\"].agregar_carga(CargaUniforme(5000.0, 0.0, 6.0))\n    ejemplos[\"2\"].agregar_carga(CargaPuntual(15000.0, 3.5))",
+        "detail": "backend.menus",
+        "documentation": {}
+    },
+    {
+        "label": "iniciar_menu_jupyter",
+        "kind": 2,
+        "importPath": "backend.menus",
+        "description": "backend.menus",
+        "peekOfCode": "def iniciar_menu_jupyter() -> None:\n    if not _WIDGETS_DISPONIBLES:\n        raise RuntimeError(\"ipywidgets no está disponible en este entorno\")\n    viga_actual: Optional[Viga] = None\n    cargas: List[Carga] = []\n    longitud = widgets.FloatText(description=\"L (m)\", value=6.0, min=0.1)\n    E = widgets.FloatText(description=\"E (Pa)\", value=210e9, min=1e3)\n    I = widgets.FloatText(description=\"I (m⁴)\", value=8e-6, min=1e-12)\n    tipo_carga = widgets.Dropdown(\n        options=[",
+        "detail": "backend.menus",
+        "documentation": {}
+    },
+    {
+        "label": "asegurar_directorios",
+        "kind": 2,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "def asegurar_directorios() -> None:\n    OUTPUT_DIR.mkdir(exist_ok=True, parents=True)\n    GRAFICAS_DIR.mkdir(exist_ok=True, parents=True)\ndef exportar_tabla(dataframe: pd.DataFrame, nombre: str) -> Path:\n    asegurar_directorios()\n    ruta = OUTPUT_DIR / f\"{nombre}.csv\"\n    dataframe.to_csv(ruta, index=False)\n    return ruta\ndef exportar_grafica(figura, nombre: str) -> Path:\n    asegurar_directorios()",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "exportar_tabla",
+        "kind": 2,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "def exportar_tabla(dataframe: pd.DataFrame, nombre: str) -> Path:\n    asegurar_directorios()\n    ruta = OUTPUT_DIR / f\"{nombre}.csv\"\n    dataframe.to_csv(ruta, index=False)\n    return ruta\ndef exportar_grafica(figura, nombre: str) -> Path:\n    asegurar_directorios()\n    ruta = GRAFICAS_DIR / f\"{nombre}.png\"\n    figura.savefig(ruta, dpi=200, bbox_inches=\"tight\")\n    return ruta",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "exportar_grafica",
+        "kind": 2,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "def exportar_grafica(figura, nombre: str) -> Path:\n    asegurar_directorios()\n    ruta = GRAFICAS_DIR / f\"{nombre}.png\"\n    figura.savefig(ruta, dpi=200, bbox_inches=\"tight\")\n    return ruta\ndef formatear_maximos(maximos: dict) -> str:\n    lineas = []\n    for clave, (posicion, valor) in maximos.items():\n        lineas.append(\n            f\"{clave.capitalize()}: {valor: .4e} en x = {posicion: .3f} m\"",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "formatear_maximos",
+        "kind": 2,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "def formatear_maximos(maximos: dict) -> str:\n    lineas = []\n    for clave, (posicion, valor) in maximos.items():\n        lineas.append(\n            f\"{clave.capitalize()}: {valor: .4e} en x = {posicion: .3f} m\"\n        )\n    return \"\\n\".join(lineas)",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "OUTPUT_DIR",
+        "kind": 5,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "OUTPUT_DIR = Path(\"outputs\")\nGRAFICAS_DIR = OUTPUT_DIR / \"graficas\"\ndef asegurar_directorios() -> None:\n    OUTPUT_DIR.mkdir(exist_ok=True, parents=True)\n    GRAFICAS_DIR.mkdir(exist_ok=True, parents=True)\ndef exportar_tabla(dataframe: pd.DataFrame, nombre: str) -> Path:\n    asegurar_directorios()\n    ruta = OUTPUT_DIR / f\"{nombre}.csv\"\n    dataframe.to_csv(ruta, index=False)\n    return ruta",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "GRAFICAS_DIR",
+        "kind": 5,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "GRAFICAS_DIR = OUTPUT_DIR / \"graficas\"\ndef asegurar_directorios() -> None:\n    OUTPUT_DIR.mkdir(exist_ok=True, parents=True)\n    GRAFICAS_DIR.mkdir(exist_ok=True, parents=True)\ndef exportar_tabla(dataframe: pd.DataFrame, nombre: str) -> Path:\n    asegurar_directorios()\n    ruta = OUTPUT_DIR / f\"{nombre}.csv\"\n    dataframe.to_csv(ruta, index=False)\n    return ruta\ndef exportar_grafica(figura, nombre: str) -> Path:",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "Carga",
+        "kind": 6,
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "peekOfCode": "class Carga:\n    \"\"\"Clase base abstracta para cualquier tipo de carga.\"\"\"\n    def total_load(self) -> float:\n        raise NotImplementedError\n    def moment_about(self, origen: float = 0.0) -> float:\n        raise NotImplementedError\n    def shear_expression(self, variable: sp.Symbol = x) -> sp.Expr:\n        \"\"\"Contribución al esfuerzo cortante.\"\"\"\n        raise NotImplementedError\n    def load_intensity(self, variable: sp.Symbol = x) -> sp.Expr:",
+        "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "CargaPuntual",
+        "kind": 6,
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "peekOfCode": "class CargaPuntual(Carga):\n    magnitud: float\n    posicion: float\n    def __post_init__(self) -> None:\n        if self.posicion < 0:\n            raise ValueError(\"La posición debe ser no negativa\")\n        if abs(self.magnitud) < 1e-12:\n            raise ValueError(\"La magnitud debe ser significativa\")\n    def total_load(self) -> float:\n        return float(self.magnitud)",
+        "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "CargaUniforme",
+        "kind": 6,
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "peekOfCode": "class CargaUniforme(Carga):\n    intensidad: float\n    inicio: float\n    fin: float\n    def __post_init__(self) -> None:\n        if self.fin <= self.inicio:\n            raise ValueError(\"'fin' debe ser mayor que 'inicio' en la carga uniforme\")\n    @property\n    def longitud(self) -> float:\n        return self.fin - self.inicio",
+        "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "CargaTrapezoidal",
+        "kind": 6,
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "peekOfCode": "class CargaTrapezoidal(Carga):\n    intensidad_inicio: float\n    intensidad_fin: float\n    inicio: float\n    fin: float\n    def __post_init__(self) -> None:\n        if self.fin <= self.inicio:\n            raise ValueError(\"'fin' debe ser mayor que 'inicio' en la carga trapezoidal\")\n    @property\n    def longitud(self) -> float:",
+        "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "CargaTriangular",
+        "kind": 6,
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "peekOfCode": "class CargaTriangular(CargaTrapezoidal):\n    def __post_init__(self) -> None:\n        super().__post_init__()\n        if not (self.intensidad_inicio == 0.0 or self.intensidad_fin == 0.0):\n            raise ValueError(\n                \"La carga triangular requiere que una de las intensidades sea cero;\"\n                \" utilice CargaTrapezoidal para el caso general.\"\n            )\n    def descripcion(self) -> str:\n        orientacion = \"creciente\" if self.intensidad_inicio == 0 else \"decreciente\"",
+        "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "Viga",
+        "kind": 6,
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "peekOfCode": "class Viga:\n    longitud: float\n    E: float\n    I: float\n    cargas: List[Carga] = field(default_factory=list)\n    _reacciones: Optional[Dict[str, float]] = field(default=None, init=False, repr=False)\n    _expresiones: Optional[Dict[str, sp.Expr]] = field(default=None, init=False, repr=False)\n    def __post_init__(self) -> None:\n        if self.longitud <= 0:\n            raise ValueError(\"La longitud de la viga debe ser positiva\")",
+        "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "heaviside",
+        "kind": 2,
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "peekOfCode": "def heaviside(val: sp.Expr) -> sp.Heaviside:\n    \"\"\"Conveniencia para usar Heaviside con valor en cero igual a 0.\"\"\"\n    return sp.Heaviside(val, 0)\ndef macaulay(variable: sp.Symbol, offset: float, exponent: int) -> sp.Expr:\n    \"\"\"Devuelve la expresión de Macaulay <x - a>^n.\"\"\"\n    return sp.Pow(variable - offset, exponent) * heaviside(variable - offset)\n@dataclass\nclass Carga:\n    \"\"\"Clase base abstracta para cualquier tipo de carga.\"\"\"\n    def total_load(self) -> float:",
+        "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "macaulay",
+        "kind": 2,
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "peekOfCode": "def macaulay(variable: sp.Symbol, offset: float, exponent: int) -> sp.Expr:\n    \"\"\"Devuelve la expresión de Macaulay <x - a>^n.\"\"\"\n    return sp.Pow(variable - offset, exponent) * heaviside(variable - offset)\n@dataclass\nclass Carga:\n    \"\"\"Clase base abstracta para cualquier tipo de carga.\"\"\"\n    def total_load(self) -> float:\n        raise NotImplementedError\n    def moment_about(self, origen: float = 0.0) -> float:\n        raise NotImplementedError",
+        "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "peekOfCode": "x = sp.symbols(\"x\", real=True, nonnegative=True)\ndef heaviside(val: sp.Expr) -> sp.Heaviside:\n    \"\"\"Conveniencia para usar Heaviside con valor en cero igual a 0.\"\"\"\n    return sp.Heaviside(val, 0)\ndef macaulay(variable: sp.Symbol, offset: float, exponent: int) -> sp.Expr:\n    \"\"\"Devuelve la expresión de Macaulay <x - a>^n.\"\"\"\n    return sp.Pow(variable - offset, exponent) * heaviside(variable - offset)\n@dataclass\nclass Carga:\n    \"\"\"Clase base abstracta para cualquier tipo de carga.\"\"\"",
+        "detail": "backend.viga",
+        "documentation": {}
+    }
+]
