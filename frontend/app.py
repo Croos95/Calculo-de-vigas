@@ -46,14 +46,39 @@ st.markdown(
     "Agrega cargas, genera diagramas y verifica el principio de superposición."
 )
 
+# Detección simple del tema para ajustar colores (fallback a claro)
+try:
+    _theme_base = st.get_option("theme.base")  # 'light' o 'dark'
+except Exception:
+    _theme_base = "light"
+IS_DARK = (_theme_base == "dark")
+
+# Ajustes CSS con soporte a modo oscuro usando media queries
 CUSTOM_CSS = """
 <style>
     .load-box { padding:0.4rem 0.6rem; background:#fafafa; border:1px solid #e3e3e3; border-radius:6px; }
     .stMetric { background:#f5f7fa; border-radius:8px; padding:0.25rem 0.5rem; }
     button[kind="primary"] { font-weight:600; }
+    /* Ajustes modo oscuro */
+    @media (prefers-color-scheme: dark) {
+        .load-box { background:#1e1f26; border:1px solid #3a3d46; color:#e6e6e6; }
+        .stMetric { background:#242730; color:#e6e6e6; }
+        /* Tablas: forzar contraste en celdas claras */
+        .stDataFrame tbody tr td { color:#e0e0e0; }
+        .stDataFrame thead tr th { color:#ffffff; }
+    }
 </style>
 """
 st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
+
+# Estilo Matplotlib acorde al modo
+if IS_DARK:
+    plt.style.use('dark_background')
+    # Ajuste de colores de rejilla más sutil
+    plt.rcParams['grid.color'] = '#444444'
+else:
+    # Asegurar estilo por defecto (por si el usuario cambió estilos previamente)
+    plt.rcParams.update(plt.rcParamsDefault)
 
 # ----------------- Helpers de conversión -----------------
 # Internamente todo en SI. Las funciones to_si_* multiplican por factor.
