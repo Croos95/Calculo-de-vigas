@@ -1,7 +1,47 @@
-"""Módulo con clases orientadas a objetos para vigas simplemente apoyadas.
+"""Modelado de vigas simplemente apoyadas (análisis elástico lineal).
 
-Contiene la jerarquía de cargas y la clase `Viga`, encargada de unir los
-componentes para el cálculo de reacciones, diagramas y deformaciones.
+Resumen
+=======
+Este módulo implementa:
+
+1. Jerarquía de cargas (puntual, uniforme, triangular, trapezoidal).
+2. Clase central :class:`Viga` que:
+     - Calcula reacciones en apoyos por equilibrio estático.
+     - Construye expresiones simbólicas de cortante V(x), momento M(x),
+         pendiente θ(x) y deflexión y(x) usando SymPy.
+     - Proporciona un *fallback* numérico robusto basado en integración
+         trapezoidal acumulada cuando la integración simbólica falla
+         (expresiones excesivamente complejas o combinaciones degeneradas).
+
+Convenciones de Signo
+---------------------
+* Fuerzas hacia abajo se ingresan con magnitud positiva (las reacciones
+    resultan positivas hacia arriba si el equilibrio lo requiere).
+* V(x) positivo: respuesta neta *hacia arriba* a la izquierda de la sección.
+    (Esto implica que una carga puntual descendente introduce un salto negativo
+    en V.)
+* M(x) positivo con la convención estándar (fibras superiores en compresión).
+
+Hipótesis
+---------
+* Flexión esbelta (teoría de Euler-Bernoulli): se desprecia cortante en
+    la deflexión (no se usa teoría de Timoshenko).
+* Material lineal elástico: E constante.
+* Momento de inercia constante a lo largo de la viga.
+* Apoyos simples: y(0)=0, y(L)=0.
+
+Notas de Implementación
+-----------------------
+* Se emplean funciones de Heaviside y notación de Macaulay para ensamblar
+    piezas a trozos sin necesidad de condicionales complicados.
+* Las integraciones simbólicas pueden lanzar excepciones; se prueban rutas
+    alternativas antes de escalar el error.
+* Cachés (_reacciones, _expresiones, _lambdas) se invalidan al agregar o
+    limpiar cargas, evitando recomputación redundante.
+* El fallback numérico garantiza siempre un resultado utilizable para la UI.
+
+Esta documentación está pensada para que un estudiante pueda explicar al
+profesor el flujo de cálculo sin entrar a detalles de SymPy.
 """
 from __future__ import annotations
 
@@ -19,6 +59,15 @@ def heaviside(val: sp.Expr) -> sp.Heaviside:
     return sp.Heaviside(val, 0)
 
 
+def heaviside_half(val: sp.Expr) -> sp.Heaviside:
+    """Heaviside con valor en el origen igual a 1/2.
+
+    Se usa para representar saltos en M(x) por momentos concentrados
+    cuando impacta evaluar exactamente en el punto de aplicación (x=a).
+    """
+    return sp.Heaviside(val, sp.Rational(1, 2))
+
+
 def macaulay(variable: sp.Symbol, offset: float, exponent: int) -> sp.Expr:
     """Devuelve la expresión de Macaulay <x - a>^n."""
     return sp.Pow(variable - offset, exponent) * heaviside(variable - offset)
@@ -26,7 +75,14 @@ def macaulay(variable: sp.Symbol, offset: float, exponent: int) -> sp.Expr:
 
 @dataclass
 class Carga:
-    """Clase base abstracta para cualquier tipo de carga."""
+    """Clase base abstracta para cualquier tipo de carga.
+
+    Cada subclase debe implementar:
+    - :meth:`total_load`  (magnitud total equivalente en Newtons).
+    - :meth:`moment_about` (momento respecto a un origen dado).
+    - :meth:`shear_expression` (contribución simbólica a V(x)).
+    - Opcionalmente :meth:`load_intensity` si es carga distribuida.
+    """
 
     def total_load(self) -> float:
         raise NotImplementedError
@@ -80,6 +136,38 @@ class CargaPuntual(Carga):
     def descripcion(self) -> str:
         return f"Carga puntual P={self.magnitud:.3g} N en x={self.posicion:.3g} m"
 
+
+@dataclass
+class CargaMomento(Carga):
+    """Momento concentrado (par) aplicado en una posición x=a.
+
+    Convención: magnitud positiva produce un salto positivo en M(x).
+    No introduce fuerza vertical neta, por lo que V(x) no cambia.
+    """
+
+    magnitud: float  # N·m
+    posicion: float  # m
+    en_vano: bool = True  # Si False y el momento está en un apoyo, no se aplica salto dentro del vano
+
+    def __post_init__(self) -> None:
+        if self.posicion < 0:
+            raise ValueError("La posición debe ser no negativa")
+        if abs(self.magnitud) < 1e-12:
+            raise ValueError("La magnitud del momento debe ser significativa")
+
+    def total_load(self) -> float:
+        return 0.0
+
+    def moment_about(self, origen: float = 0.0) -> float:
+        # Un par es un vector libre: el momento respecto a cualquier origen es su magnitud.
+        return float(self.magnitud)
+
+    def shear_expression(self, variable: sp.Symbol = x) -> sp.Expr:
+        # Un momento concentrado no altera V(x) en el modelo clásico (no usamos distribuciones).
+        return sp.Integer(0)
+
+    def descripcion(self) -> str:
+        return f"Momento puntual M={self.magnitud:.3g} N·m en x={self.posicion:.3g} m"
 
 @dataclass
 class CargaUniforme(Carga):
@@ -255,6 +343,11 @@ class Viga:
                 raise ValueError(
                     f"La carga puntual en x={carga.posicion} está fuera de la viga (L={self.longitud})"
                 )
+        elif isinstance(carga, CargaMomento):
+            if carga.posicion > self.longitud:
+                raise ValueError(
+                    f"El momento puntual en x={carga.posicion} está fuera de la viga (L={self.longitud})"
+                )
         elif hasattr(carga, "fin"):
             if getattr(carga, "fin") > self.longitud:  # type: ignore[arg-type]
                 raise ValueError(
@@ -275,6 +368,16 @@ class Viga:
         self._lambdas = None
 
     def calcular_reacciones(self) -> Dict[str, float]:
+        """Calcula y memoriza las reacciones en apoyos A (x=0) y B (x=L).
+
+        Método: equilibrio estático en 2D (solo fuerzas verticales):
+        RA + RB = ΣF
+        RB * L = Σ( F_i * distancia_i_al_origen )
+
+        Returns
+        -------
+        dict: {'RA': float, 'RB': float}
+        """
         if self._reacciones is not None:
             return self._reacciones
 
@@ -302,6 +405,14 @@ class Viga:
         return sp.simplify(V_expr)
 
     def _construir_expresiones(self) -> Dict[str, sp.Expr]:
+        """Ensamblado simbólico completo de V, M, θ y y.
+
+        Flujo general:
+        1. Construir V(x).
+        2. Integrar para M(x) (ruta principal y alternativa).
+        3. Integrar M/EI para θ(x) y luego para y(x) (con fallback simplificado).
+        4. Aplicar condiciones de borde y(0)=0, y(L)=0.
+        """
         if self._expresiones is not None:
             return self._expresiones
         if self.debug:
@@ -319,24 +430,31 @@ class Viga:
                     print(f"[Viga] Advertencia integración momento (método 1): {e}")
                     print("[Viga] Intentando método alternativo...")
                 try:
-                    # Método alternativo: integración directa sin sustitución
                     M_expr = sp.integrate(V_expr, x)
-                    # Agregar constante de integración para M(0) = 0
                     M_expr = M_expr - M_expr.subs(x, 0)
                     M_expr = sp.simplify(M_expr)
-                    if self.debug:
-                        print("[Viga] Método alternativo de momento exitoso")
                 except Exception as e2:
                     if self.debug:
                         print(f"[Viga] Error también en método alternativo de momento: {e2}")
                     raise RuntimeError(f"No se pudo calcular la expresión del momento: {e}")
 
+            # Aportar saltos en M(x) por momentos concentrados: M += M0 * H(x-a)
+            # Usamos H(0)=1/2 para una convención explícita en el punto.
+            if any(isinstance(c, CargaMomento) for c in self.cargas):
+                for c in self.cargas:
+                    if isinstance(c, CargaMomento):
+                        a = float(c.posicion)
+                        # Si el momento está exactamente en un apoyo y en_vano es False, no aplicar el salto dentro del vano
+                        if (abs(a - 0.0) < 1e-12 or abs(a - float(self.longitud)) < 1e-12) and not c.en_vano:
+                            continue
+                        M_expr += sp.Float(c.magnitud) * heaviside_half(x - c.posicion)
+                M_expr = sp.simplify(M_expr)
+
             EI = sp.Float(self.E * self.I)
             if EI == 0:
                 raise ValueError("El producto EI no puede ser cero")
-            
+
             C1, C2 = sp.symbols("C1 C2")
-            
             try:
                 theta_expr = sp.integrate(M_expr / EI, x) + C1
                 y_expr = sp.integrate(theta_expr, x) + C2
@@ -344,11 +462,8 @@ class Viga:
                 if self.debug:
                     print(f"[Viga] Advertencia integración deflexión: {e}")
                 try:
-                    # Aproximación más robusta: integrar en dos pasos acumulando simplificaciones
                     theta_expr = sp.simplify(M_expr / EI) * x + C1
                     y_expr = sp.integrate(theta_expr, x) + C2
-                    if self.debug:
-                        print("[Viga] Usando aproximación alternativa para deflexión")
                 except Exception as e2:
                     if self.debug:
                         print(f"[Viga] Error en alternativa de deflexión: {e2}")
@@ -358,7 +473,6 @@ class Viga:
                 sp.Eq(y_expr.subs(x, 0), 0),
                 sp.Eq(y_expr.subs(x, self.longitud), 0),
             ]
-            
             try:
                 solucion = sp.solve(ecuaciones, (C1, C2), simplify=True, dict=True)
                 if not solucion:
@@ -373,7 +487,7 @@ class Viga:
 
             self._expresiones = {"V": V_expr, "M": M_expr, "theta": theta_expr, "deflexion": y_expr}
             return self._expresiones
-            
+
         except Exception as e:
             if self.debug:
                 print(f"[Viga] Error general construyendo expresiones: {e}")
@@ -386,6 +500,11 @@ class Viga:
         """Evalúa las expresiones simbólicas (o recurre al fallback numérico).
 
         Devuelve un diccionario con listas (x, V, M, theta, deflexion).
+
+        Parameters
+        ----------
+        num_puntos : int
+            Número de puntos de discretización uniforme en [0, L].
         """
         try:
             expresiones = self._construir_expresiones()
@@ -442,6 +561,19 @@ class Viga:
 
         # Integraciones sucesivas
         M_vals = cumulative_trapezoid(V_vals, x_vals, initial=0.0)
+        # Añadir saltos por momentos concentrados: M += M0 * H(x-a)
+        if any(isinstance(c, CargaMomento) for c in self.cargas):
+            for c in self.cargas:
+                if isinstance(c, CargaMomento):
+                    a = float(c.posicion)
+                    # Si es en apoyo y en_vano=False, no afectar el vano
+                    if (abs(a - 0.0) < 1e-12 or abs(a - float(self.longitud)) < 1e-12) and not c.en_vano:
+                        continue
+                    step = (x_vals > a).astype(float)
+                    # Si existe un nodo exactamente en a, añadir 1/2 en ese punto para H(0)=1/2
+                    eq_mask = np.isclose(x_vals, a)
+                    step = step + 0.5 * eq_mask.astype(float)
+                    M_vals = M_vals + float(c.magnitud) * step
         EI = self.E * self.I
         theta_vals = cumulative_trapezoid(M_vals / EI, x_vals, initial=0.0)
         y_vals = cumulative_trapezoid(theta_vals, x_vals, initial=0.0)
@@ -458,3 +590,5 @@ class Viga:
             "theta": [float(v) for v in theta_vals],
             "deflexion": [float(v) for v in y_vals],
         }
+
+# Fin del módulo

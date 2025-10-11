@@ -122,6 +122,14 @@
         "documentation": {}
     },
     {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
         "label": "Dict",
         "importPath": "typing",
         "description": "typing",
@@ -186,7 +194,47 @@
         "documentation": {}
     },
     {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Iterable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -279,6 +327,31 @@
         "documentation": {}
     },
     {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "dataclass",
         "importPath": "dataclasses",
         "description": "dataclasses",
@@ -292,6 +365,183 @@
         "description": "dataclasses",
         "isExtraImport": true,
         "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "Viga",
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "isExtraImport": true,
+        "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "CargaPuntual",
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "isExtraImport": true,
+        "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "CargaUniforme",
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "isExtraImport": true,
+        "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "CargaTriangular",
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "isExtraImport": true,
+        "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "CargaTrapezoidal",
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "isExtraImport": true,
+        "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "CargaMomento",
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "isExtraImport": true,
+        "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "generar_dataframe",
+        "importPath": "backend.calculos",
+        "description": "backend.calculos",
+        "isExtraImport": true,
+        "detail": "backend.calculos",
+        "documentation": {}
+    },
+    {
+        "label": "obtener_maximos",
+        "importPath": "backend.calculos",
+        "description": "backend.calculos",
+        "isExtraImport": true,
+        "detail": "backend.calculos",
+        "documentation": {}
+    },
+    {
+        "label": "discretizar",
+        "importPath": "backend.calculos",
+        "description": "backend.calculos",
+        "isExtraImport": true,
+        "detail": "backend.calculos",
+        "documentation": {}
+    },
+    {
+        "label": "exportar_tabla",
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "isExtraImport": true,
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "exportar_grafica",
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "isExtraImport": true,
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "asegurar_directorios",
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "isExtraImport": true,
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "convertir_dataframe_export",
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "isExtraImport": true,
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "exportar_configuracion",
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "isExtraImport": true,
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "LENGTH_UNITS",
+        "importPath": "backend.units",
+        "description": "backend.units",
+        "isExtraImport": true,
+        "detail": "backend.units",
+        "documentation": {}
+    },
+    {
+        "label": "FORCE_UNITS",
+        "importPath": "backend.units",
+        "description": "backend.units",
+        "isExtraImport": true,
+        "detail": "backend.units",
+        "documentation": {}
+    },
+    {
+        "label": "DIST_LOAD_UNITS",
+        "importPath": "backend.units",
+        "description": "backend.units",
+        "isExtraImport": true,
+        "detail": "backend.units",
+        "documentation": {}
+    },
+    {
+        "label": "E_UNITS",
+        "importPath": "backend.units",
+        "description": "backend.units",
+        "isExtraImport": true,
+        "detail": "backend.units",
+        "documentation": {}
+    },
+    {
+        "label": "INERCIA_UNITS",
+        "importPath": "backend.units",
+        "description": "backend.units",
+        "isExtraImport": true,
+        "detail": "backend.units",
+        "documentation": {}
+    },
+    {
+        "label": "DEFLEXION_DISPLAY",
+        "importPath": "backend.units",
+        "description": "backend.units",
+        "isExtraImport": true,
+        "detail": "backend.units",
+        "documentation": {}
+    },
+    {
+        "label": "UNIT_SYSTEMS",
+        "importPath": "backend.units",
+        "description": "backend.units",
+        "isExtraImport": true,
+        "detail": "backend.units",
         "documentation": {}
     },
     {
@@ -637,6 +887,24 @@
         "documentation": {}
     },
     {
+        "label": "factor",
+        "kind": 2,
+        "importPath": "backend.units",
+        "description": "backend.units",
+        "peekOfCode": "def factor(units_map: Dict[str, float], key: str) -> float:\n    \"\"\"Devuelve el factor de conversión a SI para una clave, con validación simple.\"\"\"\n    if key not in units_map:\n        raise KeyError(f\"Unidad desconocida: {key}\")\n    return units_map[key]",
+        "detail": "backend.units",
+        "documentation": {}
+    },
+    {
+        "label": "UNIT_SYSTEMS",
+        "kind": 5,
+        "importPath": "backend.units",
+        "description": "backend.units",
+        "peekOfCode": "UNIT_SYSTEMS = {\n    \"SI (N, m)\": {\"len\": \"m\", \"force\": \"N\", \"w\": \"N/m\", \"E\": \"Pa\", \"I\": \"m^4\", \"defl\": \"m\"},\n    \"SI mixto (kN, m)\": {\"len\": \"m\", \"force\": \"kN\", \"w\": \"kN/m\", \"E\": \"GPa\", \"I\": \"m^4\", \"defl\": \"mm\"},\n    \"Entrada masa (kg/m)\": {\"len\": \"m\", \"force\": \"N\", \"w\": \"kg/m\", \"E\": \"Pa\", \"I\": \"m^4\", \"defl\": \"mm\"},\n    \"Imperial simplificado (lb, ft)\": {\"len\": \"ft\", \"force\": \"lb\", \"w\": \"lb/ft\", \"E\": \"GPa\", \"I\": \"m^4\", \"defl\": \"mm\"},\n}\ndef factor(units_map: Dict[str, float], key: str) -> float:\n    \"\"\"Devuelve el factor de conversión a SI para una clave, con validación simple.\"\"\"\n    if key not in units_map:\n        raise KeyError(f\"Unidad desconocida: {key}\")",
+        "detail": "backend.units",
+        "documentation": {}
+    },
+    {
         "label": "asegurar_directorios",
         "kind": 2,
         "importPath": "backend.utils",
@@ -668,7 +936,25 @@
         "kind": 2,
         "importPath": "backend.utils",
         "description": "backend.utils",
-        "peekOfCode": "def formatear_maximos(maximos: dict) -> str:\n    lineas = []\n    for clave, (posicion, valor) in maximos.items():\n        lineas.append(\n            f\"{clave.capitalize()}: {valor: .4e} en x = {posicion: .3f} m\"\n        )\n    return \"\\n\".join(lineas)",
+        "peekOfCode": "def formatear_maximos(maximos: dict) -> str:\n    lineas = []\n    for clave, (posicion, valor) in maximos.items():\n        lineas.append(\n            f\"{clave.capitalize()}: {valor: .4e} en x = {posicion: .3f} m\"\n        )\n    return \"\\n\".join(lineas)\ndef convertir_dataframe_export(\n    df_si: pd.DataFrame, len_unit: str, force_unit: str, defl_unit: str\n) -> pd.DataFrame:",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "convertir_dataframe_export",
+        "kind": 2,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "def convertir_dataframe_export(\n    df_si: pd.DataFrame, len_unit: str, force_unit: str, defl_unit: str\n) -> pd.DataFrame:\n    \"\"\"Convierte un DataFrame en SI a unidades solicitadas (solo columnas conocidas).\n    Parámetros\n    ---------\n    df_si: DataFrame con columnas en SI (x, cortante [N], momento [N*m], deflexion [m])\n    len_unit, force_unit, defl_unit: nombres de unidades destino.\n    Retorna\n    -------",
+        "detail": "backend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "exportar_configuracion",
+        "kind": 2,
+        "importPath": "backend.utils",
+        "description": "backend.utils",
+        "peekOfCode": "def exportar_configuracion(\n    L: float,\n    E: float,\n    I: float,\n    cargas: List[Carga],\n    nombre: str = \"configuracion_viga\",\n    incluir_timestamp: bool = True,\n) -> Path:\n    \"\"\"Exporta a JSON las propiedades de la viga y la lista de cargas.\n    Parámetros",
         "detail": "backend.utils",
         "documentation": {}
     },
@@ -695,7 +981,7 @@
         "kind": 6,
         "importPath": "backend.viga",
         "description": "backend.viga",
-        "peekOfCode": "class Carga:\n    \"\"\"Clase base abstracta para cualquier tipo de carga.\"\"\"\n    def total_load(self) -> float:\n        raise NotImplementedError\n    def moment_about(self, origen: float = 0.0) -> float:\n        raise NotImplementedError\n    def shear_expression(self, variable: sp.Symbol = x) -> sp.Expr:\n        \"\"\"Contribución al esfuerzo cortante.\"\"\"\n        raise NotImplementedError\n    def load_intensity(self, variable: sp.Symbol = x) -> sp.Expr:",
+        "peekOfCode": "class Carga:\n    \"\"\"Clase base abstracta para cualquier tipo de carga.\n    Cada subclase debe implementar:\n    - :meth:`total_load`  (magnitud total equivalente en Newtons).\n    - :meth:`moment_about` (momento respecto a un origen dado).\n    - :meth:`shear_expression` (contribución simbólica a V(x)).\n    - Opcionalmente :meth:`load_intensity` si es carga distribuida.\n    \"\"\"\n    def total_load(self) -> float:\n        raise NotImplementedError",
         "detail": "backend.viga",
         "documentation": {}
     },
@@ -704,7 +990,16 @@
         "kind": 6,
         "importPath": "backend.viga",
         "description": "backend.viga",
-        "peekOfCode": "class CargaPuntual(Carga):\n    magnitud: float\n    posicion: float\n    def __post_init__(self) -> None:\n        if self.posicion < 0:\n            raise ValueError(\"La posición debe ser no negativa\")\n        if abs(self.magnitud) < 1e-12:\n            raise ValueError(\"La magnitud debe ser significativa\")\n    def total_load(self) -> float:\n        return float(self.magnitud)",
+        "peekOfCode": "class CargaPuntual(Carga):\n    magnitud: float\n    posicion: float\n    units: str | None = None  # opcional: 'kgf' o 'kg'\n    def __post_init__(self) -> None:\n        # Conversión de unidades opcional (mantener SI internamente)\n        if self.units:\n            u = self.units.lower()\n            if u in {\"kgf\", \"kg\"}:  # tratar masa como kgf * g\n                self.magnitud *= 9.81",
+        "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "CargaMomento",
+        "kind": 6,
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "peekOfCode": "class CargaMomento(Carga):\n    \"\"\"Momento concentrado (par) aplicado en una posición x=a.\n    Convención: magnitud positiva produce un salto positivo en M(x).\n    No introduce fuerza vertical neta, por lo que V(x) no cambia.\n    \"\"\"\n    magnitud: float  # N·m\n    posicion: float  # m\n    en_vano: bool = True  # Si False y el momento está en un apoyo, no se aplica salto dentro del vano\n    def __post_init__(self) -> None:\n        if self.posicion < 0:",
         "detail": "backend.viga",
         "documentation": {}
     },
@@ -713,7 +1008,7 @@
         "kind": 6,
         "importPath": "backend.viga",
         "description": "backend.viga",
-        "peekOfCode": "class CargaUniforme(Carga):\n    intensidad: float\n    inicio: float\n    fin: float\n    def __post_init__(self) -> None:\n        if self.fin <= self.inicio:\n            raise ValueError(\"'fin' debe ser mayor que 'inicio' en la carga uniforme\")\n    @property\n    def longitud(self) -> float:\n        return self.fin - self.inicio",
+        "peekOfCode": "class CargaUniforme(Carga):\n    intensidad: float\n    inicio: float\n    fin: float\n    units: str | None = None  # opcional: 'kg_per_m', 'kg/m'\n    def __post_init__(self) -> None:\n        if self.fin <= self.inicio:\n            raise ValueError(\"'fin' debe ser mayor que 'inicio' en la carga uniforme\")\n        if self.units:\n            u = self.units.lower().replace(\" \", \"\")",
         "detail": "backend.viga",
         "documentation": {}
     },
@@ -722,7 +1017,7 @@
         "kind": 6,
         "importPath": "backend.viga",
         "description": "backend.viga",
-        "peekOfCode": "class CargaTrapezoidal(Carga):\n    intensidad_inicio: float\n    intensidad_fin: float\n    inicio: float\n    fin: float\n    def __post_init__(self) -> None:\n        if self.fin <= self.inicio:\n            raise ValueError(\"'fin' debe ser mayor que 'inicio' en la carga trapezoidal\")\n    @property\n    def longitud(self) -> float:",
+        "peekOfCode": "class CargaTrapezoidal(Carga):\n    intensidad_inicio: float\n    intensidad_fin: float\n    inicio: float\n    fin: float\n    units: str | None = None  # opcional: 'kg_per_m'\n    def __post_init__(self) -> None:\n        if self.fin <= self.inicio:\n            raise ValueError(\"'fin' debe ser mayor que 'inicio' en la carga trapezoidal\")\n        if self.units:",
         "detail": "backend.viga",
         "documentation": {}
     },
@@ -740,7 +1035,7 @@
         "kind": 6,
         "importPath": "backend.viga",
         "description": "backend.viga",
-        "peekOfCode": "class Viga:\n    longitud: float\n    E: float\n    I: float\n    cargas: List[Carga] = field(default_factory=list)\n    _reacciones: Optional[Dict[str, float]] = field(default=None, init=False, repr=False)\n    _expresiones: Optional[Dict[str, sp.Expr]] = field(default=None, init=False, repr=False)\n    def __post_init__(self) -> None:\n        if self.longitud <= 0:\n            raise ValueError(\"La longitud de la viga debe ser positiva\")",
+        "peekOfCode": "class Viga:\n    \"\"\"Modelo de una viga simplemente apoyada.\n    Aporta métodos para construir expresiones simbólicas de cortante, momento,\n    pendiente y deflexión. Si el proceso simbólico falla, existe un *fallback*\n    numérico vectorizado.\n    \"\"\"\n    longitud: float\n    E: float\n    I: float\n    cargas: List[Carga] = field(default_factory=list)",
         "detail": "backend.viga",
         "documentation": {}
     },
@@ -749,7 +1044,16 @@
         "kind": 2,
         "importPath": "backend.viga",
         "description": "backend.viga",
-        "peekOfCode": "def heaviside(val: sp.Expr) -> sp.Heaviside:\n    \"\"\"Conveniencia para usar Heaviside con valor en cero igual a 0.\"\"\"\n    return sp.Heaviside(val, 0)\ndef macaulay(variable: sp.Symbol, offset: float, exponent: int) -> sp.Expr:\n    \"\"\"Devuelve la expresión de Macaulay <x - a>^n.\"\"\"\n    return sp.Pow(variable - offset, exponent) * heaviside(variable - offset)\n@dataclass\nclass Carga:\n    \"\"\"Clase base abstracta para cualquier tipo de carga.\"\"\"\n    def total_load(self) -> float:",
+        "peekOfCode": "def heaviside(val: sp.Expr) -> sp.Heaviside:\n    \"\"\"Conveniencia para usar Heaviside con valor en cero igual a 0.\"\"\"\n    return sp.Heaviside(val, 0)\ndef heaviside_half(val: sp.Expr) -> sp.Heaviside:\n    \"\"\"Heaviside con valor en el origen igual a 1/2.\n    Se usa para representar saltos en M(x) por momentos concentrados\n    cuando impacta evaluar exactamente en el punto de aplicación (x=a).\n    \"\"\"\n    return sp.Heaviside(val, sp.Rational(1, 2))\ndef macaulay(variable: sp.Symbol, offset: float, exponent: int) -> sp.Expr:",
+        "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "heaviside_half",
+        "kind": 2,
+        "importPath": "backend.viga",
+        "description": "backend.viga",
+        "peekOfCode": "def heaviside_half(val: sp.Expr) -> sp.Heaviside:\n    \"\"\"Heaviside con valor en el origen igual a 1/2.\n    Se usa para representar saltos en M(x) por momentos concentrados\n    cuando impacta evaluar exactamente en el punto de aplicación (x=a).\n    \"\"\"\n    return sp.Heaviside(val, sp.Rational(1, 2))\ndef macaulay(variable: sp.Symbol, offset: float, exponent: int) -> sp.Expr:\n    \"\"\"Devuelve la expresión de Macaulay <x - a>^n.\"\"\"\n    return sp.Pow(variable - offset, exponent) * heaviside(variable - offset)\n@dataclass",
         "detail": "backend.viga",
         "documentation": {}
     },
@@ -758,7 +1062,7 @@
         "kind": 2,
         "importPath": "backend.viga",
         "description": "backend.viga",
-        "peekOfCode": "def macaulay(variable: sp.Symbol, offset: float, exponent: int) -> sp.Expr:\n    \"\"\"Devuelve la expresión de Macaulay <x - a>^n.\"\"\"\n    return sp.Pow(variable - offset, exponent) * heaviside(variable - offset)\n@dataclass\nclass Carga:\n    \"\"\"Clase base abstracta para cualquier tipo de carga.\"\"\"\n    def total_load(self) -> float:\n        raise NotImplementedError\n    def moment_about(self, origen: float = 0.0) -> float:\n        raise NotImplementedError",
+        "peekOfCode": "def macaulay(variable: sp.Symbol, offset: float, exponent: int) -> sp.Expr:\n    \"\"\"Devuelve la expresión de Macaulay <x - a>^n.\"\"\"\n    return sp.Pow(variable - offset, exponent) * heaviside(variable - offset)\n@dataclass\nclass Carga:\n    \"\"\"Clase base abstracta para cualquier tipo de carga.\n    Cada subclase debe implementar:\n    - :meth:`total_load`  (magnitud total equivalente en Newtons).\n    - :meth:`moment_about` (momento respecto a un origen dado).\n    - :meth:`shear_expression` (contribución simbólica a V(x)).",
         "detail": "backend.viga",
         "documentation": {}
     },
@@ -767,8 +1071,197 @@
         "kind": 5,
         "importPath": "backend.viga",
         "description": "backend.viga",
-        "peekOfCode": "x = sp.symbols(\"x\", real=True, nonnegative=True)\ndef heaviside(val: sp.Expr) -> sp.Heaviside:\n    \"\"\"Conveniencia para usar Heaviside con valor en cero igual a 0.\"\"\"\n    return sp.Heaviside(val, 0)\ndef macaulay(variable: sp.Symbol, offset: float, exponent: int) -> sp.Expr:\n    \"\"\"Devuelve la expresión de Macaulay <x - a>^n.\"\"\"\n    return sp.Pow(variable - offset, exponent) * heaviside(variable - offset)\n@dataclass\nclass Carga:\n    \"\"\"Clase base abstracta para cualquier tipo de carga.\"\"\"",
+        "peekOfCode": "x = sp.symbols(\"x\", real=True, nonnegative=True)\ndef heaviside(val: sp.Expr) -> sp.Heaviside:\n    \"\"\"Conveniencia para usar Heaviside con valor en cero igual a 0.\"\"\"\n    return sp.Heaviside(val, 0)\ndef heaviside_half(val: sp.Expr) -> sp.Heaviside:\n    \"\"\"Heaviside con valor en el origen igual a 1/2.\n    Se usa para representar saltos en M(x) por momentos concentrados\n    cuando impacta evaluar exactamente en el punto de aplicación (x=a).\n    \"\"\"\n    return sp.Heaviside(val, sp.Rational(1, 2))",
         "detail": "backend.viga",
+        "documentation": {}
+    },
+    {
+        "label": "reset_resultados",
+        "kind": 2,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "def reset_resultados():\n    st.session_state.pop(\"resultados\", None)\n# Asegurar path al backend\nPROJECT_ROOT = Path(__file__).resolve().parent.parent\nif str(PROJECT_ROOT) not in sys.path:\n    sys.path.append(str(PROJECT_ROOT))\nfrom backend.viga import (\n    Viga,\n    CargaPuntual,\n    CargaUniforme,",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "to_si_L",
+        "kind": 2,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "def to_si_L(v, u): return v * LENGTH_UNITS[u]\ndef to_si_F(v, u): return v * FORCE_UNITS[u]\ndef to_si_w(v, u): return v * DIST_LOAD_UNITS[u]\ndef to_si_E(v, u): return v * E_UNITS[u]\ndef to_si_I(v, u): return v * INERCIA_UNITS[u]\ndef label_with_unit(base, unit): return f\"{base} ({unit})\"\n# ----------------- Estado inicial -----------------\n_defaults_si = {\n    \"L_si\": 6.0,\n    \"E_si\": 210e9,",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "to_si_F",
+        "kind": 2,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "def to_si_F(v, u): return v * FORCE_UNITS[u]\ndef to_si_w(v, u): return v * DIST_LOAD_UNITS[u]\ndef to_si_E(v, u): return v * E_UNITS[u]\ndef to_si_I(v, u): return v * INERCIA_UNITS[u]\ndef label_with_unit(base, unit): return f\"{base} ({unit})\"\n# ----------------- Estado inicial -----------------\n_defaults_si = {\n    \"L_si\": 6.0,\n    \"E_si\": 210e9,\n    \"I_si\": 8e-6,",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "to_si_w",
+        "kind": 2,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "def to_si_w(v, u): return v * DIST_LOAD_UNITS[u]\ndef to_si_E(v, u): return v * E_UNITS[u]\ndef to_si_I(v, u): return v * INERCIA_UNITS[u]\ndef label_with_unit(base, unit): return f\"{base} ({unit})\"\n# ----------------- Estado inicial -----------------\n_defaults_si = {\n    \"L_si\": 6.0,\n    \"E_si\": 210e9,\n    \"I_si\": 8e-6,\n    \"P_si\": 1000.0,",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "to_si_E",
+        "kind": 2,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "def to_si_E(v, u): return v * E_UNITS[u]\ndef to_si_I(v, u): return v * INERCIA_UNITS[u]\ndef label_with_unit(base, unit): return f\"{base} ({unit})\"\n# ----------------- Estado inicial -----------------\n_defaults_si = {\n    \"L_si\": 6.0,\n    \"E_si\": 210e9,\n    \"I_si\": 8e-6,\n    \"P_si\": 1000.0,\n    \"a_si\": 2.0,",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "to_si_I",
+        "kind": 2,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "def to_si_I(v, u): return v * INERCIA_UNITS[u]\ndef label_with_unit(base, unit): return f\"{base} ({unit})\"\n# ----------------- Estado inicial -----------------\n_defaults_si = {\n    \"L_si\": 6.0,\n    \"E_si\": 210e9,\n    \"I_si\": 8e-6,\n    \"P_si\": 1000.0,\n    \"a_si\": 2.0,\n    \"w_si\": 2000.0,",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "label_with_unit",
+        "kind": 2,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "def label_with_unit(base, unit): return f\"{base} ({unit})\"\n# ----------------- Estado inicial -----------------\n_defaults_si = {\n    \"L_si\": 6.0,\n    \"E_si\": 210e9,\n    \"I_si\": 8e-6,\n    \"P_si\": 1000.0,\n    \"a_si\": 2.0,\n    \"w_si\": 2000.0,\n    \"w1_si\": 3000.0,",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "plot_q",
+        "kind": 2,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "def plot_q(ax, cargas, L, E, I, u_len, u_w, u_force):\n    if not cargas:\n        ax.text(0.5,0.5,\"(Sin cargas)\", ha='center', transform=ax.transAxes)\n        return\n    v_tmp = Viga(L, E, I)\n    for c in cargas:\n        v_tmp.agregar_carga(c)\n    try:\n        expr_q = v_tmp.intensidad_total()\n        xs_q, q_vals = discretizar(expr_q, v_tmp.longitud, 300)",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "PROJECT_ROOT",
+        "kind": 5,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "PROJECT_ROOT = Path(__file__).resolve().parent.parent\nif str(PROJECT_ROOT) not in sys.path:\n    sys.path.append(str(PROJECT_ROOT))\nfrom backend.viga import (\n    Viga,\n    CargaPuntual,\n    CargaUniforme,\n    CargaTriangular,\n    CargaTrapezoidal,\n        CargaMomento,",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "IS_DARK",
+        "kind": 5,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "IS_DARK = (_theme_base == \"dark\")\n# Ajustes CSS con soporte a modo oscuro usando media queries\nCUSTOM_CSS = \"\"\"\n<style>\n    .load-box { padding:0.4rem 0.6rem; background:#fafafa; border:1px solid #e3e3e3; border-radius:6px; }\n    .stMetric { background:#f5f7fa; border-radius:8px; padding:0.25rem 0.5rem; }\n    button[kind=\"primary\"] { font-weight:600; }\n    /* Ajustes modo oscuro */\n    @media (prefers-color-scheme: dark) {\n        .load-box { background:#1e1f26; border:1px solid #3a3d46; color:#e6e6e6; }",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "CUSTOM_CSS",
+        "kind": 5,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "CUSTOM_CSS = \"\"\"\n<style>\n    .load-box { padding:0.4rem 0.6rem; background:#fafafa; border:1px solid #e3e3e3; border-radius:6px; }\n    .stMetric { background:#f5f7fa; border-radius:8px; padding:0.25rem 0.5rem; }\n    button[kind=\"primary\"] { font-weight:600; }\n    /* Ajustes modo oscuro */\n    @media (prefers-color-scheme: dark) {\n        .load-box { background:#1e1f26; border:1px solid #3a3d46; color:#e6e6e6; }\n        .stMetric { background:#242730; color:#e6e6e6; }\n        /* Tablas: forzar contraste en celdas claras */",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "_defaults_si",
+        "kind": 5,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "_defaults_si = {\n    \"L_si\": 6.0,\n    \"E_si\": 210e9,\n    \"I_si\": 8e-6,\n    \"P_si\": 1000.0,\n    \"a_si\": 2.0,\n    \"w_si\": 2000.0,\n    \"w1_si\": 3000.0,\n    \"w2_si\": 1000.0,\n    \"inicio_si\": 0.0,",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "chosen_system",
+        "kind": 5,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "chosen_system = st.sidebar.selectbox(\"Sistema\", list(UNIT_SYSTEMS.keys()), key=\"unit_system\")\nsys_map = UNIT_SYSTEMS[chosen_system]\nu_len = sys_map[\"len\"]\nu_force = sys_map[\"force\"]\nu_w = sys_map[\"w\"]\nu_E = sys_map[\"E\"]\nu_I = sys_map[\"I\"]\nu_defl_disp = sys_map[\"defl\"]\nwith st.sidebar.expander(\"Unidades de exportación\", expanded=False):\n    exp_len = st.selectbox(\"Longitud exp\", list(LENGTH_UNITS.keys()), key=\"exp_len\")",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "sys_map",
+        "kind": 5,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "sys_map = UNIT_SYSTEMS[chosen_system]\nu_len = sys_map[\"len\"]\nu_force = sys_map[\"force\"]\nu_w = sys_map[\"w\"]\nu_E = sys_map[\"E\"]\nu_I = sys_map[\"I\"]\nu_defl_disp = sys_map[\"defl\"]\nwith st.sidebar.expander(\"Unidades de exportación\", expanded=False):\n    exp_len = st.selectbox(\"Longitud exp\", list(LENGTH_UNITS.keys()), key=\"exp_len\")\n    exp_force = st.selectbox(\"Fuerza exp\", list(FORCE_UNITS.keys()), key=\"exp_force\")",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "u_len",
+        "kind": 5,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "u_len = sys_map[\"len\"]\nu_force = sys_map[\"force\"]\nu_w = sys_map[\"w\"]\nu_E = sys_map[\"E\"]\nu_I = sys_map[\"I\"]\nu_defl_disp = sys_map[\"defl\"]\nwith st.sidebar.expander(\"Unidades de exportación\", expanded=False):\n    exp_len = st.selectbox(\"Longitud exp\", list(LENGTH_UNITS.keys()), key=\"exp_len\")\n    exp_force = st.selectbox(\"Fuerza exp\", list(FORCE_UNITS.keys()), key=\"exp_force\")\n    exp_defl = st.selectbox(\"Deflexión exp\", list(DEFLEXION_DISPLAY.keys()), key=\"exp_defl\")",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "u_force",
+        "kind": 5,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "u_force = sys_map[\"force\"]\nu_w = sys_map[\"w\"]\nu_E = sys_map[\"E\"]\nu_I = sys_map[\"I\"]\nu_defl_disp = sys_map[\"defl\"]\nwith st.sidebar.expander(\"Unidades de exportación\", expanded=False):\n    exp_len = st.selectbox(\"Longitud exp\", list(LENGTH_UNITS.keys()), key=\"exp_len\")\n    exp_force = st.selectbox(\"Fuerza exp\", list(FORCE_UNITS.keys()), key=\"exp_force\")\n    exp_defl = st.selectbox(\"Deflexión exp\", list(DEFLEXION_DISPLAY.keys()), key=\"exp_defl\")\nwith st.sidebar:",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "u_w",
+        "kind": 5,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "u_w = sys_map[\"w\"]\nu_E = sys_map[\"E\"]\nu_I = sys_map[\"I\"]\nu_defl_disp = sys_map[\"defl\"]\nwith st.sidebar.expander(\"Unidades de exportación\", expanded=False):\n    exp_len = st.selectbox(\"Longitud exp\", list(LENGTH_UNITS.keys()), key=\"exp_len\")\n    exp_force = st.selectbox(\"Fuerza exp\", list(FORCE_UNITS.keys()), key=\"exp_force\")\n    exp_defl = st.selectbox(\"Deflexión exp\", list(DEFLEXION_DISPLAY.keys()), key=\"exp_defl\")\nwith st.sidebar:\n    st.header(\"Propiedades de la viga\")",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "u_E",
+        "kind": 5,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "u_E = sys_map[\"E\"]\nu_I = sys_map[\"I\"]\nu_defl_disp = sys_map[\"defl\"]\nwith st.sidebar.expander(\"Unidades de exportación\", expanded=False):\n    exp_len = st.selectbox(\"Longitud exp\", list(LENGTH_UNITS.keys()), key=\"exp_len\")\n    exp_force = st.selectbox(\"Fuerza exp\", list(FORCE_UNITS.keys()), key=\"exp_force\")\n    exp_defl = st.selectbox(\"Deflexión exp\", list(DEFLEXION_DISPLAY.keys()), key=\"exp_defl\")\nwith st.sidebar:\n    st.header(\"Propiedades de la viga\")\n    L_input = st.number_input(label_with_unit(\"Longitud L\", u_len), min_value=0.1,",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "u_I",
+        "kind": 5,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "u_I = sys_map[\"I\"]\nu_defl_disp = sys_map[\"defl\"]\nwith st.sidebar.expander(\"Unidades de exportación\", expanded=False):\n    exp_len = st.selectbox(\"Longitud exp\", list(LENGTH_UNITS.keys()), key=\"exp_len\")\n    exp_force = st.selectbox(\"Fuerza exp\", list(FORCE_UNITS.keys()), key=\"exp_force\")\n    exp_defl = st.selectbox(\"Deflexión exp\", list(DEFLEXION_DISPLAY.keys()), key=\"exp_defl\")\nwith st.sidebar:\n    st.header(\"Propiedades de la viga\")\n    L_input = st.number_input(label_with_unit(\"Longitud L\", u_len), min_value=0.1,\n                              value=st.session_state.L_si / LENGTH_UNITS[u_len], step=0.5, key='L_input')",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "u_defl_disp",
+        "kind": 5,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "u_defl_disp = sys_map[\"defl\"]\nwith st.sidebar.expander(\"Unidades de exportación\", expanded=False):\n    exp_len = st.selectbox(\"Longitud exp\", list(LENGTH_UNITS.keys()), key=\"exp_len\")\n    exp_force = st.selectbox(\"Fuerza exp\", list(FORCE_UNITS.keys()), key=\"exp_force\")\n    exp_defl = st.selectbox(\"Deflexión exp\", list(DEFLEXION_DISPLAY.keys()), key=\"exp_defl\")\nwith st.sidebar:\n    st.header(\"Propiedades de la viga\")\n    L_input = st.number_input(label_with_unit(\"Longitud L\", u_len), min_value=0.1,\n                              value=st.session_state.L_si / LENGTH_UNITS[u_len], step=0.5, key='L_input')\n    E_input = st.number_input(label_with_unit(\"Módulo E\", u_E),",
+        "detail": "frontend.app",
+        "documentation": {}
+    },
+    {
+        "label": "tabs",
+        "kind": 5,
+        "importPath": "frontend.app",
+        "description": "frontend.app",
+        "peekOfCode": "tabs = st.tabs([\"🧱 Cargas\", \"📊 Resultados\", \"🧪 Verificación\"])\n# Helper graficado q(x) reutilizable\ndef plot_q(ax, cargas, L, E, I, u_len, u_w, u_force):\n    if not cargas:\n        ax.text(0.5,0.5,\"(Sin cargas)\", ha='center', transform=ax.transAxes)\n        return\n    v_tmp = Viga(L, E, I)\n    for c in cargas:\n        v_tmp.agregar_carga(c)\n    try:",
+        "detail": "frontend.app",
         "documentation": {}
     }
 ]

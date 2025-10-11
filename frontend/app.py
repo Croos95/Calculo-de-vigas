@@ -26,9 +26,13 @@ from backend.viga import (
     CargaUniforme,
     CargaTriangular,
     CargaTrapezoidal,
+        CargaMomento,
 )
 from backend.calculos import generar_dataframe, obtener_maximos, discretizar
 from backend.utils import exportar_tabla, exportar_grafica, asegurar_directorios, convertir_dataframe_export
+# Añadimos import de nueva utilidad
+from backend.utils import exportar_configuracion
+
 from backend.units import (
     LENGTH_UNITS,
     FORCE_UNITS,
@@ -152,6 +156,7 @@ with st.sidebar:
         "Tipo de carga",
         [
             "Carga puntual",
+            "Momento puntual",
             "Carga uniforme",
             "Carga triangular 0→w₀",
             "Carga triangular w₀→0",
@@ -167,13 +172,23 @@ with st.sidebar:
     # Entradas dependientes
     if tipo == "Carga puntual":
         P_input = st.number_input(label_with_unit("P", u_force),
-                                   value=st.session_state.P_si / FORCE_UNITS[u_force], step=max(1.0, st.session_state.P_si / FORCE_UNITS[u_force] * 0.25), key='P_input')
+                                  value=st.session_state.P_si / FORCE_UNITS[u_force], step=max(1.0, st.session_state.P_si / FORCE_UNITS[u_force] * 0.25), key='P_input')
         a_input = st.number_input(label_with_unit("Posición a", u_len), min_value=0.0, max_value=L_input,
-                                   value=st.session_state.a_si / LENGTH_UNITS[u_len], step=0.1, key='a_input')
+                                  value=st.session_state.a_si / LENGTH_UNITS[u_len], step=0.1, key='a_input')
         st.session_state.P_si = P_input * FORCE_UNITS[u_force]
         st.session_state.a_si = a_input * LENGTH_UNITS[u_len]
         P = st.session_state.P_si
         a = st.session_state.a_si
+    elif tipo == "Momento puntual":
+        M_input = st.number_input(label_with_unit("M", f"{u_force}·{u_len}"), value=1000.0, step=100.0, key='M_input')
+        aM_input = st.number_input(label_with_unit("Posición a", u_len), min_value=0.0, max_value=L_input,
+                                   value=st.session_state.a_si / LENGTH_UNITS[u_len], step=0.1, key='aM_input')
+        en_apoyo = (abs(aM_input - 0.0) < 1e-12) or (abs(aM_input - L_input) < 1e-12)
+        en_vano_flag = True
+        if en_apoyo:
+            en_vano_flag = st.checkbox("Aplicar salto dentro del vano si está en apoyo", value=True, help="Si desmarcas, el momento en apoyo no introduce salto en M(x) dentro del vano (solo afecta reacciones).")
+        M = M_input * FORCE_UNITS[u_force] * LENGTH_UNITS[u_len]
+        aM = aM_input * LENGTH_UNITS[u_len]
     else:
         inicio_input = st.number_input(label_with_unit("Inicio", u_len), min_value=0.0, max_value=L_input,
                                        value=st.session_state.inicio_si / LENGTH_UNITS[u_len], step=0.1, key="inicio")
@@ -202,6 +217,9 @@ with st.sidebar:
         try:
             if tipo == "Carga puntual":
                 carga = CargaPuntual(P, a)
+            elif tipo == "Momento puntual":
+                # Si no está en apoyo, en_vano es irrelevante; si está en apoyo, usar el flag seleccionado
+                carga = CargaMomento(M, aM, en_vano=en_vano_flag)
             elif tipo == "Carga uniforme":
                 carga = CargaUniforme(w, inicio, fin)
             elif tipo == "Carga triangular 0→w₀":
@@ -255,6 +273,9 @@ def plot_q(ax, cargas, L, E, I, u_len, u_w, u_force):
         for c in v_tmp.cargas:
             if isinstance(c, CargaPuntual):
                 ax.vlines(c.posicion / LENGTH_UNITS[u_len], 0, -c.magnitud / FORCE_UNITS[u_force], colors="crimson")
+            elif isinstance(c, CargaMomento):
+                xpos = c.posicion / LENGTH_UNITS[u_len]
+                ax.scatter([xpos], [0], color="purple", marker="o")
     except Exception:
         ax.text(0.5,0.5,"(Error q(x))", ha='center', transform=ax.transAxes)
     ax.set_xlabel(f"x [{u_len}]")
@@ -267,6 +288,9 @@ with tabs[0]:
     def format_carga_unidades(carga) -> str:
         if isinstance(carga, CargaPuntual):
             return f"P={carga.magnitud/ FORCE_UNITS[u_force]:.3g} {u_force} @ x={carga.posicion/ LENGTH_UNITS[u_len]:.3g} {u_len}"
+        if isinstance(carga, CargaMomento):
+            extra = " (vano)" if getattr(carga, "en_vano", True) else " (apoyo)"
+            return (f"M={carga.magnitud/(FORCE_UNITS[u_force]*LENGTH_UNITS[u_len]):.3g} {u_force}·{u_len} @ x={carga.posicion/ LENGTH_UNITS[u_len]:.3g} {u_len}{extra}")
         if isinstance(carga, CargaUniforme):
             return (f"w={carga.intensidad/ DIST_LOAD_UNITS[u_w]:.3g} {u_w} entre "
                     f"{carga.inicio/ LENGTH_UNITS[u_len]:.3g}-{carga.fin/ LENGTH_UNITS[u_len]:.3g} {u_len}")
@@ -310,6 +334,13 @@ with tabs[0]:
                 if isinstance(carga_ed, CargaPuntual):
                     newP = st.number_input("Nueva P", value=float(carga_ed.magnitud))
                     newA = st.number_input("Nueva posición", value=float(carga_ed.posicion), min_value=0.0, max_value=float(L))
+                elif isinstance(carga_ed, CargaMomento):
+                    newM = st.number_input("Nuevo M", value=float(carga_ed.magnitud))
+                    newA = st.number_input("Nueva posición", value=float(carga_ed.posicion), min_value=0.0, max_value=float(L))
+                    en_apoyo_ed = (abs(newA - 0.0) < 1e-12) or (abs(newA - float(L)) < 1e-12)
+                    newEnVano = carga_ed.en_vano
+                    if en_apoyo_ed:
+                        newEnVano = st.checkbox("Aplicar salto dentro del vano si está en apoyo", value=bool(carga_ed.en_vano), key=f"en_vano_ed_{ed}")
                 elif isinstance(carga_ed, CargaUniforme):
                     newP = st.number_input("Nueva w", value=float(carga_ed.intensidad))
                     newIni = st.number_input("Nuevo inicio", value=float(carga_ed.inicio), min_value=0.0, max_value=float(L))
@@ -329,6 +360,10 @@ with tabs[0]:
                         if isinstance(carga_ed, CargaPuntual):
                             carga_ed.magnitud = newP
                             carga_ed.posicion = newA
+                        elif isinstance(carga_ed, CargaMomento):
+                            carga_ed.magnitud = newM
+                            carga_ed.posicion = newA
+                            carga_ed.en_vano = newEnVano
                         elif isinstance(carga_ed, CargaUniforme):
                             carga_ed.intensidad = newP
                             carga_ed.inicio = newIni
@@ -370,11 +405,15 @@ with tabs[0]:
                     "L": L,
                     "E": E,
                     "I": I,
+                    # Guardamos lista de cargas para exportación futura
+                    "cargas": list(st.session_state.cargas),
                 }
                 if exportar:
                     asegurar_directorios()
                     ruta_tabla = exportar_tabla(df, "resultados_viga")
-                    st.info(f"CSV guardado en {ruta_tabla}")
+                    # Exportar configuración JSON automáticamente
+                    ruta_cfg = exportar_configuracion(L, E, I, st.session_state.cargas, nombre="config_viga")
+                    st.info(f"CSV guardado en {ruta_tabla}\nConfig JSON en {ruta_cfg}")
                 st.success("Cálculo completado. Revisa la pestaña Resultados.")
             except Exception as e:
                 st.error(f"Error en cálculo: {e}")
@@ -458,6 +497,20 @@ with tabs[1]:
             file_name="resultados_viga_convertidos.csv",
             mime="text/csv",
         )
+        # Botón adicional para exportar configuración bajo demanda
+        if st.button("💾 Exportar configuración (JSON)"):
+            try:
+                ruta_cfg = exportar_configuracion(data['L'], data['E'], data['I'], st.session_state.cargas)
+                with open(ruta_cfg, 'r', encoding='utf-8') as fjson:
+                    st.download_button(
+                        label="⬇️ Descargar JSON configuración",
+                        data=fjson.read(),
+                        file_name=ruta_cfg.name,
+                        mime="application/json",
+                    )
+                st.success(f"Configuración exportada en {ruta_cfg}")
+            except Exception as e:
+                st.error(f"No se pudo exportar configuración: {e}")
         st.caption("Mostrando tabla, métricas y diagramas en unidades de exportación. Cambia las unidades en el panel lateral para actualizar.")
 
         try:
